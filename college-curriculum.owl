@@ -1,28 +1,39 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://irnok.net/ontologies/curriculum/ns/"
      xml:base="http://irnok.net/ontologies/curriculum/ns/"
-     xmlns:solid="http://www.w3.org/ns/solid/terms#"
-     xmlns:sw="http://www.w3.org/2003/06/sw-vocab-status/ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:teach="http://linkedscience.org/teach/ns#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:cert="http://www.w3.org/ns/auth/cert#"
+     xmlns:geopolitical="http://aims.fao.org/aos/geopolitical.owl#"
      xmlns:space="http://www.w3.org/ns/pim/space#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:eugeneai="https://eugeneai.databox.me/profile/card#"
      xmlns:stub="http://example.org/stub"
      xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:vocab="http://www.w3.org/1999/xhtml/vocab#"
+     xmlns:vivo="http://vivoweb.org/sites/vivoweb.org/files/vivo-isf-public-1.6.owl"
+     xmlns:curr="http://irnok.net/ontologies/curriculum/ns/"
      xmlns:prov="http://purl.org/net/provenance/ns#"
      xmlns:wot="http://xmlns.com/wot/0.1/"
      xmlns:ontology="http://dbpedia.org/ontology/"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:study_protocol="http://purl.org/net/OCRe/study_protocol.owl#"
+     xmlns:solid="http://www.w3.org/ns/solid/terms#"
+     xmlns:sw="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:teach="http://linkedscience.org/teach/ns#"
+     xmlns:vitro="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#"
+     xmlns:core="http://vivoweb.org/ontology/core#"
+     xmlns:skos1="http://www.w3.org/2008/05/skos#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:eugeneai="https://eugeneai.databox.me/profile/card#"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:statistics="http://purl.org/net/OCRe/statistics.owl#"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="http://irnok.net/ontologies/curriculum/ns/">
         <owl:versionIRI rdf:resource="http://irnok.net/ontologies/curriculum/ns/0.1/"/>
-        <owl:imports rdf:resource="http://linkedscience.org/teach/ns#"/>
+        <owl:imports rdf:resource="http://vivoweb.org/ontology/core"/>
+        <owl:imports rdf:resource="http://linkedscience.org/teach/ns/teach.rdf"/>
         <owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
         <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An ontology for description of curriculum of a study process</dc:description>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://irnok.net/ontologies/2017/2/curriculum/0.1</rdfs:comment>
@@ -177,7 +188,6 @@
 
     <owl:ObjectProperty rdf:about="http://irnok.net/ontologies/curriculum/ns/degree">
         <rdfs:subPropertyOf rdf:resource="http://irnok.net/ontologies/curriculum/ns/specificationProperty"/>
-        <rdfs:range rdf:resource="http://irnok.net/ontologies/curriculum/ns/Degree"/>
         <rdfs:comment xml:lang="en">Indicates the degree, which the student will be granted after graduation from a High school, e.g. bachelor or Master.</rdfs:comment>
         <rdfs:comment xml:lang="ru">Устанавливает какую Ученую степень получит студент, изучив Специальность и Курс в рамках этой Специальности.</rdfs:comment>
         <rdfs:label xml:lang="en">degree</rdfs:label>
@@ -253,6 +263,7 @@
     <!-- http://irnok.net/ontologies/curriculum/ns/Academicity -->
 
     <owl:Class rdf:about="http://irnok.net/ontologies/curriculum/ns/Academicity">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
         <rdfs:comment xml:lang="en">The academic level of the knowledge given in the Course, i.e. the ratio of theoretical and applicative basis. </rdfs:comment>
         <rdfs:comment xml:lang="ru">Качественный уровень соотношения теоритических и практических знаний представленных в курсе.</rdfs:comment>
         <rdfs:label xml:lang="en">Academicity</rdfs:label>
@@ -264,6 +275,7 @@
     <!-- http://irnok.net/ontologies/curriculum/ns/ActivityType -->
 
     <owl:Class rdf:about="http://irnok.net/ontologies/curriculum/ns/ActivityType">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000007"/>
         <rdfs:comment xml:lang="en">Defines a kind of activity the Student are to be ready to do after successful graduation.</rdfs:comment>
         <rdfs:comment xml:lang="ru">Представляет вид профессиональной деятельности, к которому готовится Студент (выпускник), освоивший программу специальности.</rdfs:comment>
         <rdfs:label xml:lang="en">ActivityType</rdfs:label>
@@ -284,21 +296,11 @@
     
 
 
-    <!-- http://irnok.net/ontologies/curriculum/ns/Degree -->
-
-    <owl:Class rdf:about="http://irnok.net/ontologies/curriculum/ns/Degree">
-        <rdfs:comment xml:lang="en">The Degree that will be given to the Students, which successfully graduated.</rdfs:comment>
-        <rdfs:comment xml:lang="ru">Ученая степень, которая будет присуждена Студенту при условии успешного окончания Курса.</rdfs:comment>
-        <rdfs:label xml:lang="en">Degree</rdfs:label>
-        <rdfs:label xml:lang="ru">Ученая степень</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://irnok.net/ontologies/curriculum/ns/EducationalStandart -->
 
     <owl:Class rdf:about="http://irnok.net/ontologies/curriculum/ns/EducationalStandart">
         <rdfs:subClassOf rdf:resource="http://irnok.net/ontologies/curriculum/ns/Specification"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/bibo/Standard"/>
         <rdfs:comment xml:lang="en">The Specification prescribinf the sensual content to be studied by a Student and a set of formal properties, which are planned to be applicable to a graduated Student.</rdfs:comment>
         <rdfs:comment xml:lang="ru">Документ предписывающий содаржательный смысл изучения Курса, а также формальные характеристики, которыми должен обладать Студент, освоивший этот Курс.</rdfs:comment>
         <rdfs:label xml:lang="en">Educational Standard</rdfs:label>
@@ -322,6 +324,7 @@
     <!-- http://irnok.net/ontologies/curriculum/ns/Mural -->
 
     <owl:Class rdf:about="http://irnok.net/ontologies/curriculum/ns/Mural">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
         <rdfs:comment xml:lang="en">The form of Education process organization: intramural or extramural.</rdfs:comment>
         <rdfs:comment xml:lang="ru">Форма обучения студента - очная, заочная и т.д.</rdfs:comment>
         <rdfs:label xml:lang="en">Mural</rdfs:label>
@@ -333,6 +336,7 @@
     <!-- http://irnok.net/ontologies/curriculum/ns/Profession -->
 
     <owl:Class rdf:about="http://irnok.net/ontologies/curriculum/ns/Profession">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ARG_2000022"/>
         <rdfs:comment xml:lang="en">The profession that the Student is studying in the Course.</rdfs:comment>
         <rdfs:comment xml:lang="ru">Специальность, которую изучает Студент в рамках курса.</rdfs:comment>
         <rdfs:label xml:lang="en">Profession</rdfs:label>
@@ -344,7 +348,7 @@
     <!-- http://irnok.net/ontologies/curriculum/ns/Specification -->
 
     <owl:Class rdf:about="http://irnok.net/ontologies/curriculum/ns/Specification">
-        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000272"/>
         <rdfs:comment xml:lang="en">A Specification Document somehow prescribing the Educational process in a High school.</rdfs:comment>
         <rdfs:comment xml:lang="ru">Документ, формально организующий Образоавтельный процесс в Учебном учреждении.</rdfs:comment>
         <rdfs:label xml:lang="en">Specification</rdfs:label>
@@ -401,6 +405,97 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://irnok.net/ontologies/curriculum/ns/Director -->
+
+    <owl:NamedIndividual rdf:about="http://irnok.net/ontologies/curriculum/ns/Director">
+        <rdf:type rdf:resource="http://vivoweb.org/ontology/core#FacultyAdministrativePosition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://irnok.net/ontologies/curriculum/ns/ExtraMural -->
+
+    <owl:NamedIndividual rdf:about="http://irnok.net/ontologies/curriculum/ns/ExtraMural">
+        <rdf:type rdf:resource="http://irnok.net/ontologies/curriculum/ns/Mural"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://irnok.net/ontologies/curriculum/ns/IntraMural -->
+
+    <owl:NamedIndividual rdf:about="http://irnok.net/ontologies/curriculum/ns/IntraMural">
+        <rdf:type rdf:resource="http://irnok.net/ontologies/curriculum/ns/Mural"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://irnok.net/ontologies/curriculum/ns/PhD -->
+
+    <owl:NamedIndividual rdf:about="http://irnok.net/ontologies/curriculum/ns/PhD">
+        <rdf:type rdf:resource="http://purl.org/ontology/bibo/ThesisDegree"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://irnok.net/ontologies/curriculum/ns/Professor -->
+
+    <owl:NamedIndividual rdf:about="http://irnok.net/ontologies/curriculum/ns/Professor">
+        <rdf:type rdf:resource="http://vivoweb.org/ontology/core#FacultyPosition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://irnok.net/ontologies/curriculum/ns/academic -->
+
+    <owl:NamedIndividual rdf:about="http://irnok.net/ontologies/curriculum/ns/academic">
+        <rdf:type rdf:resource="http://irnok.net/ontologies/curriculum/ns/Academicity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://irnok.net/ontologies/curriculum/ns/applied -->
+
+    <owl:NamedIndividual rdf:about="http://irnok.net/ontologies/curriculum/ns/applied">
+        <rdf:type rdf:resource="http://irnok.net/ontologies/curriculum/ns/Academicity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://irnok.net/ontologies/curriculum/ns/bachelor -->
+
+    <owl:NamedIndividual rdf:about="http://irnok.net/ontologies/curriculum/ns/bachelor">
+        <rdf:type rdf:resource="http://purl.org/ontology/bibo/ThesisDegree"/>
+        <rdf:type rdf:resource="http://vivoweb.org/ontology/core#AcademicDegree"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://irnok.net/ontologies/curriculum/ns/master -->
+
+    <owl:NamedIndividual rdf:about="http://irnok.net/ontologies/curriculum/ns/master">
+        <rdf:type rdf:resource="http://purl.org/ontology/bibo/ThesisDegree"/>
+        <rdf:type rdf:resource="http://vivoweb.org/ontology/core#AcademicDegree"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://irnok.net/ontologies/curriculum/ns/professor -->
+
+    <owl:NamedIndividual rdf:about="http://irnok.net/ontologies/curriculum/ns/professor">
+        <rdf:type rdf:resource="http://purl.org/ontology/bibo/ThesisDegree"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://irnok.net/ontologies/curriculum/ns/specialist -->
+
+    <owl:NamedIndividual rdf:about="http://irnok.net/ontologies/curriculum/ns/specialist">
+        <rdf:type rdf:resource="http://purl.org/ontology/bibo/ThesisDegree"/>
+        <rdf:type rdf:resource="http://vivoweb.org/ontology/core#AcademicDegree"/>
+    </owl:NamedIndividual>
     
 
 
