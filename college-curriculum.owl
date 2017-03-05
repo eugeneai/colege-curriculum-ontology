@@ -1,0 +1,526 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://irnok.net/ontologies/curriculum/ns/"
+     xml:base="http://irnok.net/ontologies/curriculum/ns/"
+     xmlns:solid="http://www.w3.org/ns/solid/terms#"
+     xmlns:sw="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:teach="http://linkedscience.org/teach/ns#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:cert="http://www.w3.org/ns/auth/cert#"
+     xmlns:space="http://www.w3.org/ns/pim/space#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:eugeneai="https://eugeneai.databox.me/profile/card#"
+     xmlns:stub="http://example.org/stub"
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:vocab="http://www.w3.org/1999/xhtml/vocab#"
+     xmlns:prov="http://purl.org/net/provenance/ns#"
+     xmlns:wot="http://xmlns.com/wot/0.1/"
+     xmlns:ontology="http://dbpedia.org/ontology/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://irnok.net/ontologies/curriculum/ns/">
+        <owl:versionIRI rdf:resource="http://irnok.net/ontologies/curriculum/ns/0.1/"/>
+        <owl:imports rdf:resource="http://linkedscience.org/teach/ns#"/>
+        <owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An ontology for description of curriculum of a study process</dc:description>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://irnok.net/ontologies/2017/2/curriculum/0.1</rdfs:comment>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1</owl:versionInfo>
+        <rdfs:isDefinedBy rdf:resource="http://irnok.net/ontologies/2017/2/curriculum/ns/0.1/"/>
+        <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A curriculum description ontology</dc:title>
+        <dc:author rdf:resource="eugeneai:me"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/author -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/author"/>
+    
+
+
+    <!-- http://www.w3.org/ns/auth/cert#exponent -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/auth/cert#exponent"/>
+    
+
+
+    <!-- http://www.w3.org/ns/auth/cert#key -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/auth/cert#key"/>
+    
+
+
+    <!-- http://www.w3.org/ns/auth/cert#modulus -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/auth/cert#modulus"/>
+    
+
+
+    <!-- http://www.w3.org/ns/pim/space#preferencesFile -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/pim/space#preferencesFile"/>
+    
+
+
+    <!-- http://www.w3.org/ns/pim/space#storage -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/pim/space#storage"/>
+    
+
+
+    <!-- http://www.w3.org/ns/solid/terms#inbox -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/solid/terms#inbox"/>
+    
+
+
+    <!-- http://www.w3.org/ns/solid/terms#timeline -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/solid/terms#timeline"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/img -->
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/img"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/maker -->
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/maker"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/mbox -->
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/mbox"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/phone -->
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/phone"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/primaryTopic -->
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/primaryTopic"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://irnok.net/ontologies/curriculum/ns/academicity -->
+
+    <owl:ObjectProperty rdf:about="http://irnok.net/ontologies/curriculum/ns/academicity">
+        <rdfs:subPropertyOf rdf:resource="http://irnok.net/ontologies/curriculum/ns/specificationProperty"/>
+        <rdfs:range rdf:resource="http://irnok.net/ontologies/curriculum/ns/Academicity"/>
+        <rdfs:comment xml:lang="en">Indicates the relation of theoretic and practice basis represented in the Course.</rdfs:comment>
+        <rdfs:comment xml:lang="ru">Устанавливает соотношение теоретического и практического базиса (знаний, умений и навыков) преподаваемых в Курсе. </rdfs:comment>
+        <rdfs:label xml:lang="en">academicity</rdfs:label>
+        <rdfs:label xml:lang="ru">академичность</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://irnok.net/ontologies/curriculum/ns/activityType -->
+
+    <owl:ObjectProperty rdf:about="http://irnok.net/ontologies/curriculum/ns/activityType">
+        <rdfs:subPropertyOf rdf:resource="http://irnok.net/ontologies/curriculum/ns/specificationProperty"/>
+        <rdfs:range rdf:resource="http://irnok.net/ontologies/curriculum/ns/ActivityType"/>
+        <rdfs:comment xml:lang="en">Indicates the type of activity of a Student to be prepared with the Course.</rdfs:comment>
+        <rdfs:comment xml:lang="ru">Устанавливает Вид профессиональной деятельности, к которым готовятся выпускники, освоившие Программу Курса .</rdfs:comment>
+        <rdfs:label xml:lang="en">activitytype</rdfs:label>
+        <rdfs:label xml:lang="ru">видДеятельности</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://irnok.net/ontologies/curriculum/ns/curriculum -->
+
+    <owl:ObjectProperty rdf:about="http://irnok.net/ontologies/curriculum/ns/curriculum">
+        <rdfs:subPropertyOf rdf:resource="http://irnok.net/ontologies/curriculum/ns/specificationProperty"/>
+        <rdfs:range rdf:resource="http://irnok.net/ontologies/curriculum/ns/Curriculum"/>
+        <rdfs:comment xml:lang="en">Indicates the Curriculum set to a Course specification document of a Course.</rdfs:comment>
+        <rdfs:comment xml:lang="ru">Устанавливает Учебный план для Курса в Спецификации.</rdfs:comment>
+        <rdfs:label xml:lang="en">curriculum</rdfs:label>
+        <rdfs:label xml:lang="ru">учебныйПлан</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://irnok.net/ontologies/curriculum/ns/degree -->
+
+    <owl:ObjectProperty rdf:about="http://irnok.net/ontologies/curriculum/ns/degree">
+        <rdfs:subPropertyOf rdf:resource="http://irnok.net/ontologies/curriculum/ns/specificationProperty"/>
+        <rdfs:range rdf:resource="http://irnok.net/ontologies/curriculum/ns/Degree"/>
+        <rdfs:comment xml:lang="en">Indicates the degree, which the student will be granted after graduation from a High school, e.g. bachelor or Master.</rdfs:comment>
+        <rdfs:comment xml:lang="ru">Устанавливает какую Ученую степень получит студент, изучив Специальность и Курс в рамках этой Специальности.</rdfs:comment>
+        <rdfs:label xml:lang="en">degree</rdfs:label>
+        <rdfs:label xml:lang="ru">ученаяСтепень</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://irnok.net/ontologies/curriculum/ns/mural -->
+
+    <owl:ObjectProperty rdf:about="http://irnok.net/ontologies/curriculum/ns/mural">
+        <rdfs:subPropertyOf rdf:resource="http://irnok.net/ontologies/curriculum/ns/specificationProperty"/>
+        <rdfs:range rdf:resource="http://irnok.net/ontologies/curriculum/ns/Mural"/>
+        <rdfs:comment xml:lang="en">Indicates the mural regime of study.</rdfs:comment>
+        <rdfs:comment xml:lang="ru">Устанавливает в какой форме проходит обучение по Учебному плану: очное или заочное.</rdfs:comment>
+        <rdfs:label xml:lang="en">mural</rdfs:label>
+        <rdfs:label xml:lang="ru">формаОбучения</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://irnok.net/ontologies/curriculum/ns/profession -->
+
+    <owl:ObjectProperty rdf:about="http://irnok.net/ontologies/curriculum/ns/profession">
+        <rdfs:subPropertyOf rdf:resource="http://irnok.net/ontologies/curriculum/ns/specificationProperty"/>
+        <rdfs:range rdf:resource="http://irnok.net/ontologies/curriculum/ns/Profession"/>
+        <rdfs:comment xml:lang="en">Indicates the profession the Course studying process is organized for.</rdfs:comment>
+        <rdfs:comment xml:lang="ru">Устанавливает какую специальность получит Студент (выпускник) по окончании изучени Курса.</rdfs:comment>
+        <rdfs:label xml:lang="en">profession</rdfs:label>
+        <rdfs:label xml:lang="ru">специальность</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://irnok.net/ontologies/curriculum/ns/specificationProperty -->
+
+    <owl:ObjectProperty rdf:about="http://irnok.net/ontologies/curriculum/ns/specificationProperty">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://irnok.net/ontologies/curriculum/ns/Specification"/>
+        <rdfs:comment xml:lang="en">An object property characterizing a Study process specification document.</rdfs:comment>
+        <rdfs:comment xml:lang="ru">Свойство документа, формально описывающего учебный процесс Курса.</rdfs:comment>
+        <rdfs:label xml:lang="en">specificationProperty</rdfs:label>
+        <rdfs:label xml:lang="ru">свойствоСпецификации</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://irnok.net/ontologies/curriculum/ns/standard -->
+
+    <owl:ObjectProperty rdf:about="http://irnok.net/ontologies/curriculum/ns/standard">
+        <rdfs:subPropertyOf rdf:resource="http://irnok.net/ontologies/curriculum/ns/specificationProperty"/>
+        <rdfs:range rdf:resource="http://irnok.net/ontologies/curriculum/ns/EducationalStandart"/>
+        <rdfs:comment xml:lang="en">Refers a Specification document to the implemented government educational Standard.</rdfs:comment>
+        <rdfs:comment xml:lang="ru">Устанавливает ссылку на Государственный стандарт из реализующего его документа.</rdfs:comment>
+        <rdfs:label xml:lang="en">standard</rdfs:label>
+        <rdfs:label xml:lang="ru">государственныйСтандарт</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://irnok.net/ontologies/curriculum/ns/Academicity -->
+
+    <owl:Class rdf:about="http://irnok.net/ontologies/curriculum/ns/Academicity">
+        <rdfs:comment xml:lang="en">The academic level of the knowledge given in the Course, i.e. the ratio of theoretical and applicative basis. </rdfs:comment>
+        <rdfs:comment xml:lang="ru">Качественный уровень соотношения теоритических и практических знаний представленных в курсе.</rdfs:comment>
+        <rdfs:label xml:lang="en">Academicity</rdfs:label>
+        <rdfs:label xml:lang="ru">Академичность</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://irnok.net/ontologies/curriculum/ns/ActivityType -->
+
+    <owl:Class rdf:about="http://irnok.net/ontologies/curriculum/ns/ActivityType">
+        <rdfs:comment xml:lang="en">Defines a kind of activity the Student are to be ready to do after successful graduation.</rdfs:comment>
+        <rdfs:comment xml:lang="ru">Представляет вид профессиональной деятельности, к которому готовится Студент (выпускник), освоивший программу специальности.</rdfs:comment>
+        <rdfs:label xml:lang="en">ActivityType</rdfs:label>
+        <rdfs:label xml:lang="ru">Вид профессиональной деятельности</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://irnok.net/ontologies/curriculum/ns/Curriculum -->
+
+    <owl:Class rdf:about="http://irnok.net/ontologies/curriculum/ns/Curriculum">
+        <rdfs:subClassOf rdf:resource="http://irnok.net/ontologies/curriculum/ns/Specification"/>
+        <rdfs:comment xml:lang="en">Specification of educational process as a general schedule prescribing the sequence of courses to be developed and their amounts of time to be devoted to.</rdfs:comment>
+        <rdfs:comment xml:lang="ru">План учебного процесса устанавливающий последовательность курсов, которые должный пройти студенты, а также объем времени, затрачиваемый на изучение каждого курса.</rdfs:comment>
+        <rdfs:label xml:lang="en">Curriculum</rdfs:label>
+        <rdfs:label xml:lang="ru">Учебный план</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://irnok.net/ontologies/curriculum/ns/Degree -->
+
+    <owl:Class rdf:about="http://irnok.net/ontologies/curriculum/ns/Degree">
+        <rdfs:comment xml:lang="en">The Degree that will be given to the Students, which successfully graduated.</rdfs:comment>
+        <rdfs:comment xml:lang="ru">Ученая степень, которая будет присуждена Студенту при условии успешного окончания Курса.</rdfs:comment>
+        <rdfs:label xml:lang="en">Degree</rdfs:label>
+        <rdfs:label xml:lang="ru">Ученая степень</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://irnok.net/ontologies/curriculum/ns/EducationalStandart -->
+
+    <owl:Class rdf:about="http://irnok.net/ontologies/curriculum/ns/EducationalStandart">
+        <rdfs:subClassOf rdf:resource="http://irnok.net/ontologies/curriculum/ns/Specification"/>
+        <rdfs:comment xml:lang="en">The Specification prescribinf the sensual content to be studied by a Student and a set of formal properties, which are planned to be applicable to a graduated Student.</rdfs:comment>
+        <rdfs:comment xml:lang="ru">Документ предписывающий содаржательный смысл изучения Курса, а также формальные характеристики, которыми должен обладать Студент, освоивший этот Курс.</rdfs:comment>
+        <rdfs:label xml:lang="en">Educational Standard</rdfs:label>
+        <rdfs:label xml:lang="ru">Образовательный стандарт</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://irnok.net/ontologies/curriculum/ns/EvaluationBasis -->
+
+    <owl:Class rdf:about="http://irnok.net/ontologies/curriculum/ns/EvaluationBasis">
+        <rdfs:subClassOf rdf:resource="http://irnok.net/ontologies/curriculum/ns/StudyProgramSpecification"/>
+        <rdfs:comment xml:lang="en">The document describing the process of evaluation of Student&apos;s results of educational process.</rdfs:comment>
+        <rdfs:comment xml:lang="ru">Документ указывающий как необходимо оценивать результаты обучения Студента - уровень усвоения им компетенций.</rdfs:comment>
+        <rdfs:label xml:lang="en">Evaluation Basis</rdfs:label>
+        <rdfs:label xml:lang="ru">Фонд оценочных средств</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://irnok.net/ontologies/curriculum/ns/Mural -->
+
+    <owl:Class rdf:about="http://irnok.net/ontologies/curriculum/ns/Mural">
+        <rdfs:comment xml:lang="en">The form of Education process organization: intramural or extramural.</rdfs:comment>
+        <rdfs:comment xml:lang="ru">Форма обучения студента - очная, заочная и т.д.</rdfs:comment>
+        <rdfs:label xml:lang="en">Mural</rdfs:label>
+        <rdfs:label xml:lang="ru">Форма обучения</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://irnok.net/ontologies/curriculum/ns/Profession -->
+
+    <owl:Class rdf:about="http://irnok.net/ontologies/curriculum/ns/Profession">
+        <rdfs:comment xml:lang="en">The profession that the Student is studying in the Course.</rdfs:comment>
+        <rdfs:comment xml:lang="ru">Специальность, которую изучает Студент в рамках курса.</rdfs:comment>
+        <rdfs:label xml:lang="en">Profession</rdfs:label>
+        <rdfs:label xml:lang="ru">Специальность</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://irnok.net/ontologies/curriculum/ns/Specification -->
+
+    <owl:Class rdf:about="http://irnok.net/ontologies/curriculum/ns/Specification">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+        <rdfs:comment xml:lang="en">A Specification Document somehow prescribing the Educational process in a High school.</rdfs:comment>
+        <rdfs:comment xml:lang="ru">Документ, формально организующий Образоавтельный процесс в Учебном учреждении.</rdfs:comment>
+        <rdfs:label xml:lang="en">Specification</rdfs:label>
+        <rdfs:label xml:lang="ru">Спецификация</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://irnok.net/ontologies/curriculum/ns/StudyProgramSpecification -->
+
+    <owl:Class rdf:about="http://irnok.net/ontologies/curriculum/ns/StudyProgramSpecification">
+        <rdfs:subClassOf rdf:resource="http://irnok.net/ontologies/curriculum/ns/Specification"/>
+        <rdfs:comment xml:lang="en">The specification document for a Course. It specifies formal terms of the program, concrete timespans, etc., as well as general outline of topics to be studied.</rdfs:comment>
+        <rdfs:comment xml:lang="ru">Документ, конкретизирующий Курс. Укзываются формальные параметры курса, затрачиваемое время на вполнение того или иного процесса.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://irnok.net/ontologies/curriculum/ns/WorkingProgram -->
+
+    <owl:Class rdf:about="http://irnok.net/ontologies/curriculum/ns/WorkingProgram">
+        <rdfs:subClassOf rdf:resource="http://irnok.net/ontologies/curriculum/ns/StudyProgramSpecification"/>
+        <rdfs:comment xml:lang="en">Working program is a Specification document prescribin the pedagogical process within the Course do be studied.</rdfs:comment>
+        <rdfs:comment xml:lang="ru">Рабочая программа курса (дисциплины) - документ специфицирующий учебный процесс в рамках соответствующего Курса. Программа включает цели и задачи, на решение которых направлен педагогический процесс, перечень компетенций, которые должен усвоить студент, тематический план, спасок лекций, самостоятельных работ и т.п., а также время на выполнение каждого вида работ.</rdfs:comment>
+        <rdfs:label xml:lang="en">Working program</rdfs:label>
+        <rdfs:label xml:lang="ru">Рабочая программа</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://irnok.net/ontologies/curriculum/ns/WorkingProgramAnnotation -->
+
+    <owl:Class rdf:about="http://irnok.net/ontologies/curriculum/ns/WorkingProgramAnnotation">
+        <rdfs:subClassOf rdf:resource="http://irnok.net/ontologies/curriculum/ns/StudyProgramSpecification"/>
+        <rdfs:comment xml:lang="en">A short formal text describing the basic terms of a Working program.</rdfs:comment>
+        <rdfs:comment xml:lang="ru">Документ, который содержит краткое описание рабочей программы.</rdfs:comment>
+        <rdfs:label xml:lang="en">Working program annotation</rdfs:label>
+        <rdfs:label xml:lang="ru">Аннотация рабочей программы</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/auth/cert#RSAPublicKey -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/auth/cert#RSAPublicKey"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://eugeneai.databox.me/profile/card -->
+
+    <owl:NamedIndividual rdf:about="https://eugeneai.databox.me/profile/card">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/PersonalProfileDocument"/>
+        <foaf:maker rdf:resource="https://eugeneai.databox.me/profile/card#me"/>
+        <foaf:primaryTopic rdf:resource="https://eugeneai.databox.me/profile/card#me"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://eugeneai.databox.me/profile/card#key26eb -->
+
+    <owl:NamedIndividual rdf:about="https://eugeneai.databox.me/profile/card#key26eb">
+        <rdf:type rdf:resource="http://www.w3.org/ns/auth/cert#RSAPublicKey"/>
+        <rdfs:label>Created 04 Sep 16 11:28 UTC on eugeneai.databox.me</rdfs:label>
+        <cert:exponent rdf:datatype="http://www.w3.org/2001/XMLSchema#int">65537</cert:exponent>
+        <cert:modulus rdf:datatype="http://www.w3.org/2001/XMLSchema#hexBinary">ec09a0fb78653b2fdf373dba0003f484caa4fc954aac087e923ccf58abbb5d419e1b0d71e822b1e17a8ebdf73bb5f176a06a239181b078018306781b7dc0aab71d649c55a03cd388ee4f67e6bb27f0d0dc689d79569e1b98447db8bb2fde13f4253c9ed0dbd8f7991ab8450c5de8ef56aeeb6837e8334badb52773b0b098420cd845f3fd34c332ab841bc072bb8ee93f99eb4f17976847d2118e888a95d2587220d6225d53f562a2621cce2ed3924f8f9baff16e04372cdcb766dabd3c423a852a3ac6a4156da8b5a84d29d4c4884a0b0b04629f4c1e2305358cb458a906f8eb0bf0c6da4d68cdad50491d51e3d5a0b5e8fbcba2e77957b6606f072d086b24f3</cert:modulus>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://eugeneai.databox.me/profile/card#key6f06 -->
+
+    <owl:NamedIndividual rdf:about="https://eugeneai.databox.me/profile/card#key6f06">
+        <rdf:type rdf:resource="http://www.w3.org/ns/auth/cert#RSAPublicKey"/>
+        <rdfs:label>Created 05 Sep 16 10:26 UTC on eugeneai.databox.me</rdfs:label>
+        <cert:exponent rdf:datatype="http://www.w3.org/2001/XMLSchema#int">65537</cert:exponent>
+        <cert:modulus rdf:datatype="http://www.w3.org/2001/XMLSchema#hexBinary">c64b94c1649f3ee4ab95f1e2aae6caaffdef707aa9da9ddd1968c61b33656f4221a2ba24d2a6bca029ac2e10b763dabe3d99eb95264dd05427c6fe29d5d3ee649b005f0c865e8998c5c1dd106a278c17168af4ae1e9db317e626e852f93cedf9ea5f709c9722559d51f654a829b6f008f730fb06e8a9c7ff5e73493b753fe2c86c808edd3c8f17f1191e07f50c4f5727426bc01b8fc2e11c39b93727787eec3040d461d07f1e8a79bbc474dbc5fb34c17a0ae3715a98b3fe9c3776657dcf2f71cf69838118473b83f14ace280e543a9e8662072c076ab35c6050668ab7a0d65ae9e12a47105fd2d3f62777fffb59d18af370853f31ff2371f4b2095e49c5fdd1</cert:modulus>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://eugeneai.databox.me/profile/card#key8e7f -->
+
+    <owl:NamedIndividual rdf:about="https://eugeneai.databox.me/profile/card#key8e7f">
+        <rdf:type rdf:resource="http://www.w3.org/ns/auth/cert#RSAPublicKey"/>
+        <rdfs:label>Created 27 Nov 16 03:29 UTC on eugeneai.databox.me</rdfs:label>
+        <cert:exponent rdf:datatype="http://www.w3.org/2001/XMLSchema#int">65537</cert:exponent>
+        <cert:modulus rdf:datatype="http://www.w3.org/2001/XMLSchema#hexBinary">cfa3c878412ffcb0db2dfe31df90b1e29068bd073477dc1e8fe8c6148f6f97337f333b51d810b76ffce7bc51853b8e61d79b95c2ad48b9336139dce720ce45fc41eef0eb5588a9fa1fa33816fb18e399b9afa8433beac5bd504e2ff960a11ef9e2ae231ba5125d908b1d8397af1abf3e89bc01b9c313da2e2dcf8faf0a93cff09a50eb7f45a585e7a86ac7f01a60f923304b5d2b145373321cacfa35dacb7cc7298cef8747fbbaee7d3cb88fd3ef9498ef5bd7d727932aa829f236819df73a4309c2955cb1466789dfe0cba5e3fe4ce608ffd2bd1c2a6b0914323985a2c264723e7f3fee95064ccc870923fff222e39878df14bf8c375fb4dfe0f6d7a55b912d</cert:modulus>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://eugeneai.databox.me/profile/card#me -->
+
+    <owl:NamedIndividual rdf:about="https://eugeneai.databox.me/profile/card#me">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <foaf:name>Evgeny Cherkashin</foaf:name>
+        <cert:key rdf:resource="https://eugeneai.databox.me/profile/card#key26eb"/>
+        <cert:key rdf:resource="https://eugeneai.databox.me/profile/card#key6f06"/>
+        <cert:key rdf:resource="https://eugeneai.databox.me/profile/card#key8e7f"/>
+        <foaf:img rdf:resource="https://www.gravatar.com/avatar/5bbc4b05e3aaf70c46f484b0872ba61d?d=404&amp;s=300"/>
+        <foaf:mbox rdf:resource="mailto:eugeneai@icc.ru"/>
+        <foaf:mbox rdf:resource="mailto:eugeneai@irnok.net"/>
+        <foaf:phone rdf:resource="tel:+79148706754"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.gravatar.com/avatar/5bbc4b05e3aaf70c46f484b0872ba61d?d=404&amp;s=300 -->
+
+    <owl:NamedIndividual rdf:about="https://www.gravatar.com/avatar/5bbc4b05e3aaf70c46f484b0872ba61d?d=404&amp;s=300"/>
+    
+
+
+    <!-- mailto:eugeneai@icc.ru -->
+
+    <owl:NamedIndividual rdf:about="mailto:eugeneai@icc.ru"/>
+    
+
+
+    <!-- mailto:eugeneai@irnok.net -->
+
+    <owl:NamedIndividual rdf:about="mailto:eugeneai@irnok.net"/>
+    
+
+
+    <!-- tel:+79148706754 -->
+
+    <owl:NamedIndividual rdf:about="tel:+79148706754"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://linkedscience.org/teach/ns#StudyProgram">
+        <rdfs:comment xml:lang="ru">Рабочая программа дисциплины (направления подготовки). Курс (Course) - это составляющая единица рабочей программы.</rdfs:comment>
+        <rdfs:label xml:lang="ru">Рабочая программа</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://irnok.net/ontologies/curriculum/ns/EvaluationBasis"/>
+            <rdf:Description rdf:about="http://irnok.net/ontologies/curriculum/ns/WorkingProgram"/>
+            <rdf:Description rdf:about="http://irnok.net/ontologies/curriculum/ns/WorkingProgramAnnotation"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
+
