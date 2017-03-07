@@ -2,6 +2,6 @@
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <uri id="Imports Wizard Entry" name="http://vivoweb.org/ontology/core" uri="http://vivoweb.org/sites/vivoweb.org/files/vivo-isf-public-1.6.owl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1488697159965" name="http://irnok.net/ontologies/curriculum/ns/" uri="college-curriculum.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1488900073435" name="http://irnok.net/ontologies/curriculum/ns/" uri="college-curriculum.owl"/>
     </group>
 </catalog>
